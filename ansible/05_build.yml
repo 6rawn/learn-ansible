@@ -1,0 +1,7 @@
+- hosts: localhost
+  become: yes
+  become_user: isucon
+  gather_facts: no
+  tasks:
+    - name: build localhostmarker
+      shell: bash -lc 'cd /home/isucon/private_isu.git/localhostmarker ; make'
